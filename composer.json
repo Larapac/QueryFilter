@@ -1,0 +1,17 @@
+{
+  "name": "larapac/query-filter",
+  "description": "description_text",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maksim (Ellrion) Platonov",
+      "email": "ellrion11@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.0",
+    "illuminate/http": "5.*",
+    "illuminate/database": "5.*"
+  }
+}
