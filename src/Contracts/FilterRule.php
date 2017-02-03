@@ -5,9 +5,14 @@ namespace Larapac\QueryFilters\Contracts;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 
+/**
+ * Интерфейс правила фильтрации.
+ */
 interface FilterRule
 {
     /**
+     * Применение правила к запросу.
+     *
      * @param Builder|QueryBuilder $query
      * @return Builder|QueryBuilder
      */

@@ -8,6 +8,20 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Http\Request;
 
+/**
+ * Базовая реализация фильра на основании http запроса.
+ *
+ * Заполение набора правил используя транспилер;
+ * При отсутствии правил в запросе возможность применить набор правил по умолчанию;
+ * Применение основных правил на основании их имени:
+ *  - is
+ *  - has
+ *  - sort
+ *  - search
+ *  - остальные трактуются как строгий поиск по полю
+ * Контроль допустимости правил (белый список);
+ *
+ */
 abstract class SimpleFilter extends AbstractFilter
 {
     /**

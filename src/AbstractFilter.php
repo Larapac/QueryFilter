@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use InvalidArgumentException;
 
+/**
+ * Основной класс применения фильтра.
+ *
+ * Контроль установки фильтра и его хранение;
+ * Механизм применения фильтра как последовательное применение всех правил
+ *  с перекрытием их действия самим классом фильтра;
+ *
+ * Данный фильтр не связан с http запросом
+ */
 abstract class AbstractFilter implements QueryFilter
 {
     /**
